@@ -1,0 +1,203 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  font-family: "Libre Franklin", sans-serif;
+  min-height: 95vh;
+  width: 320px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  .logo {
+    width: 86px;
+    height: 26px;
+  }
+  h1 {
+    color: $gray;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 25px 0 10px 0;
+    span {
+      color: $very-dark-blue;
+      font-weight: 600;
+    }
+  }
+  p {
+    color: $very-dark-blue;
+    font-size: 1rem;
+    padding-bottom: 25px;
+  }
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  input {
+    border-radius: 30px;
+    border: 1px solid $pale-blue;
+    height: 40px;
+    width: 90%;
+    padding-left: 20px;
+    margin-bottom: 10px;
+
+    &:focus {
+      outline: none;
+      border-color: $blue;
+    }
+  }
+
+  input::placeholder {
+    color: $pale-blue;
+    font-weight: 200;
+  }
+  .btn {
+    font-family: inherit;
+    font-weight: 600;
+    color: #fff;
+    background-color: $blue;
+    border-radius: 30px;
+    border: 1px solid $pale-blue;
+    height: 40px;
+    width: 90%;
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      transform: scale(0.95);
+      background-color: lighten($blue, 10%);
+    }
+  }
+}
+.vaildation {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 0.7rem;
+  display: none;
+  color: $light-red;
+  font-style: italic;
+}
+
+.dashboard-image {
+  margin-top: 50px;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.social-media {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+  .facebook,
+  .instagram,
+  .twitter {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $pale-blue;
+    border-radius: 50%;
+    color: $blue;
+    &:active,
+    &:active,
+    &:active {
+      transform: scale(0.95);
+      background-color: $blue;
+      color: #fff;
+    }
+  }
+}
+.copyright {
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  color: $gray;
+  font-weight: 200;
+}
+
+footer {
+  font-family: "Libre Franklin", sans-serif;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  p {
+    padding: 10px 0;
+  }
+}
+@media (min-width: 768px) {
+  main {
+    margin-top: 70px;
+    width: 600px;
+  }
+  header {
+    h1 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  form {
+    flex-direction: row;
+    justify-content: space-around;
+    input {
+      width: 60%;
+      margin: 0;
+    }
+    .btn {
+      width: 30%;
+      padding: 0;
+      margin-right: 10px;
+    }
+  }
+  .vaildation {
+    text-align: left;
+    margin-left: 7%;
+  }
+  .social-media {
+    width: 25%;
+    .facebook,
+    .twitter,
+    .instagram {
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+@media (pointer: fine) {
+  form {
+    .btn:hover {
+      cursor: pointer;
+      background-color: lighten($blue, 10%);
+    }
+  }
+
+  .social-media {
+    .facebook:hover,
+    .instagram:hover,
+    .twitter:hover {
+      background-color: $blue;
+      color: #fff;
+    }
+  }
+}
